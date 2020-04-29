@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 
 import com.xerian.examples.spring.validation.apierror.ApiErrorCode;
-import com.xerian.examples.spring.validation.apierror.ApiErrorsView;
+import com.xerian.examples.spring.validation.apierror.ApiErrors;
 import com.xerian.examples.spring.validation.apierror.ApiGlobalError;
 
 public class NotFound extends ApiErrorException {
@@ -14,7 +14,7 @@ public class NotFound extends ApiErrorException {
 
 	public NotFound(String objectName) {
 		ApiGlobalError apiGlobalError = new ApiGlobalError(objectName, ApiErrorCode.NOT_FOUND.getCode());
-		apiErrorsView = new ApiErrorsView(null, List.of(apiGlobalError));
+		apiErrors = new ApiErrors(null, List.of(apiGlobalError));
 		httpStatus = HttpStatus.NOT_FOUND;
 	}
 

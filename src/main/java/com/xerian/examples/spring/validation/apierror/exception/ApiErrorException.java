@@ -2,7 +2,7 @@ package com.xerian.examples.spring.validation.apierror.exception;
 
 import org.springframework.http.HttpStatus;
 
-import com.xerian.examples.spring.validation.apierror.ApiErrorsView;
+import com.xerian.examples.spring.validation.apierror.ApiErrors;
 
 public class ApiErrorException extends RuntimeException {
 
@@ -10,31 +10,31 @@ public class ApiErrorException extends RuntimeException {
 	}
 
 	/**
-	 * @param apiErrorsView
+	 * @param apiErrors
 	 * @param httpStatus
 	 */
-	public ApiErrorException(ApiErrorsView apiErrorsView) {
+	public ApiErrorException(ApiErrors apiErrors) {
 		super();
-		this.apiErrorsView = apiErrorsView;
+		this.apiErrors = apiErrors;
 	}
 
 	/**
-	 * @param apiErrorsView
+	 * @param apiErrors
 	 * @param httpStatus
 	 */
-	public ApiErrorException(ApiErrorsView apiErrorsView, HttpStatus httpStatus) {
+	public ApiErrorException(ApiErrors apiErrors, HttpStatus httpStatus) {
 		super();
-		this.apiErrorsView = apiErrorsView;
+		this.apiErrors = apiErrors;
 		this.httpStatus = httpStatus;
 	}
 
 	private static final long serialVersionUID = 1L;
 
-	ApiErrorsView apiErrorsView;
+	ApiErrors apiErrors;
 	HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
 
-	public ApiErrorsView getApiErrorsView() {
-		return apiErrorsView;
+	public ApiErrors getapiErrors() {
+		return apiErrors;
 	}
 
 	public HttpStatus getHttpStatus() {

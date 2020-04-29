@@ -3,14 +3,14 @@ package com.xerian.examples.spring.validation.apierror;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApiErrorsView {
+public class ApiErrors {
     private List<ApiFieldError> fieldErrors;
     private List<ApiGlobalError> globalErrors;
 
-    public ApiErrorsView() {
+    public ApiErrors() {
     }
 
-    public ApiErrorsView(List<ApiFieldError> fieldErrors, List<ApiGlobalError> globalErrors) {
+    public ApiErrors(List<ApiFieldError> fieldErrors, List<ApiGlobalError> globalErrors) {
         this.fieldErrors = fieldErrors;
         this.globalErrors = globalErrors;
     }
