@@ -1,4 +1,4 @@
-package co.bbenson;
+package com.xerian.examples.spring.validation;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

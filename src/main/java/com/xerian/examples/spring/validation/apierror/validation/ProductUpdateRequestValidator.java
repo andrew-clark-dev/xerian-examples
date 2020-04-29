@@ -13,7 +13,7 @@ public class ProductUpdateRequestValidator implements Validator {
 //TODO    private ProductRepository productRepository;
 
     @Autowired
-    public ProductUpdateRequestValidator(ProductRepository productRepository) {
+    public ProductUpdateRequestValidator() {
 //TODO        this.productRepository = productRepository;
     }
 
